@@ -16,13 +16,6 @@ var seedFunc = require("./seeds");
 
 // seedFunc();
 
-const connectionString = "mongodb+srv://Andy2436:Terraria2436@favoritevideogames.1kwwq.mongodb.net/FavoriteVideoGames?retryWrites=true&w=majority";
-mongoose.connect(connectionString, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('Connected to DB!'))
-.catch(error => console.log(error.message));
 
 
 app.use(express.static("views"));
