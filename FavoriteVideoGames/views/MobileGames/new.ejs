@@ -1,0 +1,25 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container partialsDivContainer">
+	<div class="jumbotron">
+		<div class="d-flex justify-content-center">
+			<h1 class="mobilegames-new-h1">
+				Post New Mobilegames of the Year
+			</h1>
+		</div>
+	</div>
+</div>
+
+<form action="/mobilegames/<%=user._id%>" method="POST">
+	<div class="form-group">
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" placeholder="First Place Mobile Game" name="mobilegames[firstPlace]" required></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" placeholder="Second Place Mobile Game" name="mobilegames[secondPlace]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" placeholder="Third Place Mobile Game" name="mobilegames[thirdPlace]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" placeholder="First Place Mobile Game Image" name="mobilegames[image]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" placeholder="Year of Vote" name="mobilegames[year]" required></div>
+		<div class="d-flex justify-content-center"><button class="mobilegames-new-btn btn btn-success" type="submit">Submit</button></div>
+	</div>
+</form>
+
+
+<%- include("../partials/footer.ejs") %>

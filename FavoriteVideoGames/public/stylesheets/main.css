@@ -1,0 +1,317 @@
+.card {
+	width: 325px;
+} 
+
+.videogames-show-image {
+	width: 200px;
+	height: 300px;
+}
+
+.videogames-users-image {
+	width: 200px;
+	height: 300px;
+}
+
+.videogames-game-div {
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 100px;
+}
+
+.videogames-game-div {
+	margin: grey 4px solid;
+}
+
+.videogame-placement-1{
+	background: #FFD700;
+	width: 100%;
+}
+
+.videogame-placement-2 {
+	background: #C0C0C0;	
+	width: 100%;
+}
+
+.videogame-placement-3 {
+	background: #CD7F32 ;	
+	width: 100%;
+}
+
+.videogames-user {
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 100px;
+}
+
+.videogames-h1 {
+	color: steelblue;
+}
+
+.videogames-user-btn {
+	margin-top: 20px;
+}
+
+.videogamesToMobilegames-btn {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.videogames-show-cardBody {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.videogames-show-h1 {
+	color: steelblue;
+}
+
+.videogames-new {
+	width: 30%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.videogames-new-btn {
+	margin-top: 20px;
+	width: 30%;
+	margin-bottom: 40px;
+}
+
+.videogames-new-h1 {
+	color: steelblue;
+}
+
+.editDelete-div {
+	margin-top: 15px;
+}
+
+
+
+/* Mobile Games CSS
+ */
+
+
+.mobilegames-users-image {
+	width: 300px;
+	height: 350px;
+}
+
+.mobilegames-user-btn {
+	margin-top: 20px;
+}
+
+.mobilegames-user {
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 100px;
+}
+
+.mobilegames-show-h1 {
+	color: steelblue;
+}
+
+.mobilegames-game-div {
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 100px;
+}
+
+.mobilegames-game-div {
+	margin: grey 4px solid;
+}
+
+.mobilegames-show-image {
+	width: 300px;
+	height: 300px;
+}
+
+.mobilegame-placement-1 {
+	background: #FFD700;
+	width: 100%;
+}
+
+.mobilegame-placement-2 {
+	background: #C0C0C0;	
+	width: 100%;
+}
+
+.mobilegame-placement-3 {
+	background: #CD7F32 ;	
+	width: 100%;
+}
+
+.mobilegame-new-btn {
+	margin-top: 20px;
+	width: 30%;
+}
+
+.mobilegames-new-h1 {
+	color: steelblue;
+}
+
+.mobilegames-new {
+	width: 30%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.mobilegames-new-btn {
+	margin-top: 20px;
+	width: 30%;
+}
+
+.mobilegames-show-cardBody {
+	padding: 0;
+	margin-top: 20px;
+}
+
+nav {
+	background: lightgrey;
+}
+
+.comments-new-h1 {
+	color: steelblue;
+}
+
+.videogames-comments-div {
+	margin-top: 20px;
+}
+
+.mobilegames-new {
+	width: 30%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.mobilegames-new-btn {
+	margin-top: 20px;
+	width: 30%;
+	margin-bottom: 40px;
+}
+
+
+.mobilegamesToVideogames-btn {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.mobilegames-h1 {
+	color: steelblue;
+}
+
+
+
+
+
+
+/* Other CSS
+ */
+
+
+.partialsDivContainer {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+
+
+/* Home Page CSS
+ */
+
+.main-h1 {
+	z-index: 1;
+	color: white;
+	position: relative;
+	text-align: center;
+	margin-top: 200px;
+}
+
+.main-btn {
+	text-align: center;
+	margin-bottom: 10px;
+	z-index: 1;
+	width: 200px;
+}
+
+.mainDiv3 {
+	margin-top: 50px;
+}
+
+.home-btn2 {
+	margin-right: 10px;
+	z-index: 1;
+}
+
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.slideshow li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1){
+	background-image: url("https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperSmashBrosUltimate_02_image1600w.jpg")
+}
+
+.slideshow li:nth-child(2){
+	background-image: url("https://specials-images.forbesimg.com/imageserve/6021461af82ec83ac92d90d8/960x0.jpg?fit=scale");
+	animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3){
+	background-image: url("https://cdn.akamai.steamstatic.com/steam/apps/264710/capsule_616x353.jpg?t=1609982984");
+	animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4){
+	background-image: url("https://miketendo64.com/wp-content/uploads/2020/05/the-legend-of-zelda-breath-of-the-wild-switch-hero.jpg");
+	animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5){
+	background-image: url("https://external-preview.redd.it/yxBJ4e0JVAPS-HARz00wPwoOUYhmI8rt2SXuWsZ-W4c.png?format=pjpg&auto=webp&s=fffe66b0ec3b21126eea12152e020d846a253d6d");
+	animation-delay: 40s;
+}
+
+
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	
+	10% {
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	
+	20% {
+		opacity: 1;
+	}
+	
+	30% {
+		opacity: 0;
+	}
+}

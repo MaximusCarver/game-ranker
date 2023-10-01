@@ -1,0 +1,25 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container partialsDivContainer">
+	<div class="jumbotron">
+		<div class="d-flex justify-content-center">
+			<h1 class="videogames-new-h1">
+				Edit Mobilegames
+			</h1>
+		</div>
+	</div>
+</div>
+
+<form action="/mobilegames/<%=user._id%>/games/<%=mobilegames._id%>?_method=PUT" method="POST">
+	<div class="form-group">
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" value="<%=mobilegames.firstPlace%>" name="mobilegames[firstPlace]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" value="<%=mobilegames.secondPlace%>" name="mobilegames[secondPlace]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" value="<%=mobilegames.thirdPlace%>" name="mobilegames[thirdPlace]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" value="<%=mobilegames.image%>" name="mobilegames[image]"></div>
+		<div class="d-flex justify-content-center"><input class="mobilegames-new form-control" value="<%=mobilegames.year%>" name="mobilegames[year]"></div>
+		<div class="d-flex justify-content-center"><button class="mobilegames-new-btn btn btn-success" type="submit">Submit</button></div>
+	</div>
+</form>
+
+
+<%- include("../partials/footer.ejs") %>

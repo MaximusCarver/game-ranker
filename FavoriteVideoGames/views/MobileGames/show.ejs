@@ -1,0 +1,82 @@
+<%- include("../partials/header.ejs") %>
+
+
+<div class="jumbotron">
+	
+	<div class="d-flex justify-content-center">
+		<h1 class="mobilegames-show-h1">
+			Mobile Games of the Years
+		</h1>
+	</div>
+	
+	<div class="d-flex justify-content-center">
+		<h4 class="mobilegames-show-h4">
+			View <%= user.username %>'s Favorite Mobile Games of the Years
+		</h4>
+	</div>
+	
+</div>
+
+
+<div class="row">
+	
+	<% user.mobilegames.forEach(function(item){ %> 
+		<div class="mobilegames-game-div card">
+			<div class="mobilegames-year-div d-flex justify-content-center card-title"><h3><%= item.year%></h3></div>
+			<div class="d-flex justify-content-center"><img src="<%=item.image%>" class="mobilegames-show-image img-thumbnail"></div>
+			<div class="card-body mobilegames-show-cardBody">
+				<div><button class="mobilegame-placement-1 btn">1st Place: <%=item.firstPlace%></button></div>
+				<div><button class="mobilegame-placement-2 btn">2nd Place: <%=item.secondPlace%></button></div>
+				<div><button class="mobilegame-placement-3 btn">3rd Place: <%=item.thirdPlace%></button></div>
+			</div>
+			
+			<% if(currentUser && currentUser.username == user.username){ %>
+				<div class="d-flex justify-content-center editDelete-div">
+					<a href="/mobilegames/<%=user._id%>/games/<%=item._id%>/edit" class="mobilegames-show-games-edit-btn btn btn-sm btn-warning">Edit Games</a>
+					<form action="/mobilegames/<%=user._id%>/games/<%=item._id%>?_method=DELETE" method="POST">
+						<button class="mobilegames-show-games-delete-btn btn btn-sm btn-danger">Delete games</button>
+					</form>
+				</div>
+			<% } %>
+		</div>
+	<% }) %>
+
+</div>
+
+<% if(currentUser && currentUser.username == user.username){ %>
+	<div class="d-flex justify-content-center">
+		<a href="/mobilegames/<%=user._id%>/new" class="videogames-new-btn btn btn-warning">Post Favorite Mobile Games</a>
+	</div>
+<% } %>
+
+<div class="container">
+	<div class="jumbotron">
+		<div class="d-flex justify-content-center">
+			<a href="/mobilegames/<%=user._id%>/comments/new" class="videogames-show-commentsNew-btn btn btn-warning">Post Comment</a>
+		</div>
+		<% userComments.mobilegamesComments.forEach(function(comment){ %>
+			<div class="videogames-comments-div">
+				<div>
+					<strong><%= comment.author.username %></strong>
+				</div>
+
+				<div>
+					<%= comment.comment %>
+				</div>
+				
+				<% if(currentUser && currentUser.username == comment.author.username){ %>
+					<div class="d-flex justify-content-left">
+						<a href="/mobilegames/<%=user._id%>/comments/<%=comment._id%>/edit" class="mobilegames-show-comments-edit-btn btn btn-sm btn-warning">Edit Comment</a>
+						<form action="/mobilegames/<%=user._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+							<button class="mobilegames-show-comments-delete-btn btn btn-sm btn-danger">Delete Comment</button>
+						</form>
+					</div>
+				<% } %>
+			</div>
+		<% }) %>
+	</div>
+</div>
+
+
+
+<%- include("../partials/footer.ejs") %>
